@@ -1,10 +1,4 @@
-import {module} from 'angular'
+import { module } from 'angular';
 
 // Define the `phonecatApp` module
-module('phonecatApp', [
-  'ngAnimate',
-  'ngRoute',
-  'core',
-  'phoneDetail',
-  'phoneList'
-]);
+module('phonecatApp', ['ngAnimate', 'ngRoute', 'core', 'phoneDetail', 'phoneList']);

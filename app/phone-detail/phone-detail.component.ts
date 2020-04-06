@@ -1,11 +1,11 @@
 let phoneDetailComponent = {
   templateUrl: './phone-detail/phone-detail.template.html',
-  controller: PhoneDetailController
-}
-  
+  controller: PhoneDetailController,
+};
+
 function PhoneDetailController($routeParams, Phone) {
   var self = this;
-  self.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
+  self.phone = Phone.get({ phoneId: $routeParams.phoneId }, function (phone) {
     self.setImage(phone.images[0]);
   });
 
@@ -14,4 +14,4 @@ function PhoneDetailController($routeParams, Phone) {
   };
 }
 
-export default phoneDetailComponent
+export default phoneDetailComponent;

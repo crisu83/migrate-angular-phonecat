@@ -1,11 +1,11 @@
 let phoneListComponent = {
   templateUrl: './phone-list/phone-list.template.html',
-  controller: PhoneListController
-}
+  controller: PhoneListController,
+};
 
 function PhoneListController(Phone) {
-  this.phones = Phone.query()
-  this.orderProp = 'age'
+  this.phones = Phone.query();
+  this.orderProp = 'age';
 }
 
-export default phoneListComponent
+export default phoneListComponent;
