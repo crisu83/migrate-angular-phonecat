@@ -1,7 +1,6 @@
-'use strict';
+import {module} from 'angular'
 
-angular.
-  module('core').
+module('core').
   filter('checkmark', function() {
     return function(input) {
       return input ? '\u2713' : '\u2718';

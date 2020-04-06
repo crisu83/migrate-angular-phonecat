@@ -1,7 +1,7 @@
-'use strict';
+import {module} from 'angular'
 
 // Define the `phonecatApp` module
-angular.module('phonecatApp', [
+module('phonecatApp', [
   'ngAnimate',
   'ngRoute',
   'core',

@@ -1,7 +1,6 @@
-'use strict';
+import {module} from 'angular'
 
-angular.
-  module('phonecatApp').
+module('phonecatApp').
   config(['$routeProvider',
     function config($routeProvider) {
       $routeProvider.
