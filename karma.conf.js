@@ -1,32 +1,23 @@
 //jshint strict: false
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
-
     basePath: './app',
-
-    files: [
-      'lib/angular/angular.js',
-      'lib/angular-animate/angular-animate.js',
-      'lib/angular-resource/angular-resource.js',
-      'lib/angular-route/angular-route.js',
-      '../node_modules/angular-mocks/angular-mocks.js',
-      '**/*.module.js',
-      '*!(.module|.spec).js',
-      '!(lib)/**/*!(.module|.spec).js',
-      '**/*.spec.js'
-    ],
-
+    files: ['index.ts', '**/*.ts'],
+    preprocessors: {
+      '**/*.ts': ['karma-typescript'],
+    },
+    reporters: ['progress', 'karma-typescript'],
+    frameworks: ['jasmine', 'karma-typescript'],
+    browsers: ['ChromeHeadless'],
+    plugins: ['karma-typescript', 'karma-jasmine', 'karma-jasmine-html-reporter', 'karma-chrome-launcher'],
+    karmaTypescriptConfig: {
+      tsconfig: '../tsconfig.json',
+    },
+    client: {
+      clearContext: false,
+    },
+    logLevel: config.LOG_INFO,
     autoWatch: true,
-
-    frameworks: ['jasmine'],
-
-    browsers: ['Chrome', 'Firefox'],
-
-    plugins: [
-      'karma-chrome-launcher',
-      'karma-firefox-launcher',
-      'karma-jasmine'
-    ]
-
+    singleRun: true,
   });
 };
