@@ -3,9 +3,9 @@ import { mock, equals } from 'angular';
 import { PhoneModule } from '../phone/phone.module';
 
 describe('Phone', function () {
-  var $httpBackend;
-  var Phone;
-  var phonesData = [{ name: 'Phone X' }, { name: 'Phone Y' }, { name: 'Phone Z' }];
+  let $httpBackend;
+  let PhoneService;
+  let phonesData = [{ name: 'Phone X' }, { name: 'Phone Y' }, { name: 'Phone Z' }];
 
   // Add a custom equality tester before each test
   beforeEach(function () {
@@ -17,11 +17,11 @@ describe('Phone', function () {
 
   // Instantiate the service and "train" `$httpBackend` before each test
   beforeEach(
-    mock.inject(function (_$httpBackend_, _Phone_) {
+    mock.inject(function (_$httpBackend_, _PhoneService_) {
       $httpBackend = _$httpBackend_;
       $httpBackend.expectGET('phones/phones.json').respond(phonesData);
 
-      Phone = _Phone_;
+      PhoneService = _PhoneService_;
     })
   );
 
@@ -32,7 +32,7 @@ describe('Phone', function () {
   });
 
   it('should fetch the phones data from `/phones/phones.json`', function () {
-    var phones = Phone.query();
+    let phones = PhoneService.getResource().query();
 
     expect(phones).toEqual([]);
 

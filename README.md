@@ -32,3 +32,5 @@ Do the following to build the project on your own computer:
 - https://angular.io/guide/upgrade
 - https://medium.com/@UpgradingAJS/baby-steps-to-webpack-for-ngupgrade-535265194852
 - https://vsavkin.com/migrating-angular-1-applications-to-angular-2-in-5-simple-steps-40621800a25b
+- https://www.digitalocean.com/community/tutorials/how-to-upgrade-from-angularjs-to-angular-with-ngupgrade
+- https://www.digitalocean.com/community/tutorials/migrate-your-angularjs-services-to-angular-with-ngupgrade
