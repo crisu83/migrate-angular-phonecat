@@ -1,4 +1,5 @@
 import { module } from 'angular';
+import { NgModule } from '@angular/core';
 import { PhoneModule } from '../core/phone/phone.module';
 import phoneListComponent from './phone-list.component';
 
@@ -6,3 +7,6 @@ import phoneListComponent from './phone-list.component';
 export const PhoneListModule = module('phoneList', [PhoneModule.name]);
 
 PhoneListModule.component('phoneList', phoneListComponent);
+
+@NgModule({})
+export class PhoneListNgModule {}
