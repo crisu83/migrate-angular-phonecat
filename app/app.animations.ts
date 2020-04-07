@@ -1,6 +1,4 @@
-import angular from 'angular';
-
-angular.module('phonecatApp').animation('.phone', function phoneAnimationFactory() {
+export default function PhoneAnimationFactory() {
   return {
     addClass: animateIn,
     removeClass: animateOut,
@@ -48,4 +46,4 @@ angular.module('phonecatApp').animation('.phone', function phoneAnimationFactory
       if (wasCanceled) element.stop();
     };
   }
-});
+}
