@@ -4,11 +4,13 @@ let appPath = __dirname + '/app';
 module.exports = {
   context: appPath,
   mode: 'development',
-  entry: './app.module.ts',
+  entry: './index.ts',
   output: {
     path: appPath + '/dist',
     filename: 'bundle.js',
   },
+  // Using 'source-map' breaks DevTools in Chome
+  devtool: 'eval-source-map',
   module: {
     rules: [
       {

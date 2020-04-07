@@ -6,12 +6,20 @@
   "repository": "https://github.com/angular/angular-phonecat",
   "license": "MIT",
   "dependencies": {
+    "@angular/common": "^9.1.0",
+    "@angular/compiler": "^9.1.0",
+    "@angular/core": "^9.1.0",
+    "@angular/platform-browser": "^9.1.0",
+    "@angular/platform-browser-dynamic": "^9.1.0",
+    "@angular/upgrade": "^9.1.0",
     "angular": "^1.7.9",
     "angular-animate": "^1.7.9",
     "angular-resource": "^1.7.9",
     "angular-route": "^1.7.9",
     "bootstrap": "^3.4.1",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "rxjs": "^6.5.5",
+    "zone.js": "^0.10.3"
   },
   "devDependencies": {
     "@types/angular": "^1.7.0",

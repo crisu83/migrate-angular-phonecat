@@ -12,7 +12,7 @@ import { PhoneDetailModule } from './phone-detail/phone-detail.module';
 import { PhoneListModule } from './phone-list/phone-list.module';
 
 // Define the `phonecatApp` module
-export const AppModule = module('phonecatApp', [
+export const Ng1AppModule = module('phonecatApp', [
   'ngAnimate',
   'ngRoute',
   CoreModule.name,
@@ -20,4 +20,4 @@ export const AppModule = module('phonecatApp', [
   PhoneListModule.name,
 ]);
 
-AppModule.config(config);
+Ng1AppModule.config(config);
