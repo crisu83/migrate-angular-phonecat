@@ -1,7 +1,5 @@
-import { module } from 'angular';
-
-module('core').filter('checkmark', function () {
+export default function CheckmarkFilter() {
   return function (input) {
     return input ? '\u2713' : '\u2718';
   };
-});
+}

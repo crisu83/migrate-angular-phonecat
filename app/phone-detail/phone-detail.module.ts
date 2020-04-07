@@ -1,5 +1,8 @@
 import { module } from 'angular';
+import { PhoneModule } from '../core/phone/phone.module';
 import phoneDetailComponent from './phone-detail.component';
 
 // Define the `phoneDetail` module
-module('phoneDetail', ['ngRoute', 'core.phone']).component('phoneDetail', phoneDetailComponent);
+export const PhoneDetailModule = module('phoneDetail', ['ngRoute', PhoneModule.name]);
+
+PhoneDetailModule.component('phoneDetail', phoneDetailComponent);

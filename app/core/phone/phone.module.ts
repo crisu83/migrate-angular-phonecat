@@ -1,4 +1,4 @@
 import { module } from 'angular';
 
 // Define the `core.phone` module
-module('core.phone', ['ngResource']);
+export const PhoneModule = module('core.phone', ['ngResource']);
