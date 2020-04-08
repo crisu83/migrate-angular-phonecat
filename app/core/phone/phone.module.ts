@@ -5,7 +5,7 @@ import PhoneService from './phone.service';
 // Define the `core.phone` module
 export const PhoneModule = module('core.phone', ['ngResource']);
 
-PhoneModule.factory('PhoneService', PhoneService);
+PhoneModule.factory('phoneService', PhoneService);
 
 @NgModule({})
 export class PhoneNgModule {}

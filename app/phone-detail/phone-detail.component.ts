@@ -1,15 +1,21 @@
-import PhoneService from 'app/core/phone/phone.service';
+import PhoneService, { PhoneData } from 'app/core/phone/phone.service';
+
+class PhoneDetailController {
+  phone: PhoneData;
+  mainImageUrl: string;
+
+  constructor(private $routeParams: any, private phoneService: PhoneService) {
+    this.phone = phoneService.getResource().get({ phoneId: $routeParams.phoneId }, (phone) => {
+      this.setImage(phone.images[0]);
+    });
+  }
+
+  setImage(imageUrl: string) {
+    this.mainImageUrl = imageUrl;
+  }
+}
 
 export const phoneDetailComponent = {
   templateUrl: './phone-detail/phone-detail.template.html',
-  controller: function ($routeParams: any, PhoneService: PhoneService) {
-    let self = this;
-    self.phone = PhoneService.getResource().get({ phoneId: $routeParams.phoneId }, function (phone) {
-      self.setImage(phone.images[0]);
-    });
-
-    self.setImage = function setImage(imageUrl) {
-      self.mainImageUrl = imageUrl;
-    };
-  },
+  controller: PhoneDetailController,
 };

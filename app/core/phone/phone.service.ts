@@ -1,3 +1,8 @@
+export interface PhoneData {
+  name: string;
+  images?: string[];
+}
+
 export default class PhoneService {
   constructor(private $resource: any) {}
 
