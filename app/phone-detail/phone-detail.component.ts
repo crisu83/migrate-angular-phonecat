@@ -15,7 +15,9 @@ class PhoneDetailController {
   }
 }
 
-export const phoneDetailComponent = {
+const PhoneDetailComponent = {
   templateUrl: './phone-detail/phone-detail.template.html',
   controller: PhoneDetailController,
 };
+
+export default PhoneDetailComponent;

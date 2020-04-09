@@ -1,12 +1,10 @@
-import { module } from 'angular';
-import { NgModule } from '@angular/core';
-import { PhoneModule } from '../core/phone/phone.module';
-import { phoneDetailComponent } from './phone-detail.component';
+import * as angular from 'angular';
+import PhoneModule from '../core/phone/phone.module';
+import PhoneDetailComponent from './phone-detail.component';
 
 // Define the `phoneDetail` module
-export const PhoneDetailModule = module('phoneDetail', ['ngRoute', PhoneModule.name]);
+const PhoneDetailModule = angular.module('phoneDetail', ['ngRoute', PhoneModule.name]);
 
-PhoneDetailModule.component('phoneDetail', phoneDetailComponent);
+PhoneDetailModule.component('phoneDetail', PhoneDetailComponent);
 
-@NgModule({})
-export class PhoneDetailNgModule {}
+export default PhoneDetailModule;

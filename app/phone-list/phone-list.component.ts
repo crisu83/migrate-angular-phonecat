@@ -10,7 +10,9 @@ class PhoneListController {
   }
 }
 
-export const phoneListComponent = {
+const PhoneListComponent = {
   templateUrl: './phone-list/phone-list.template.html',
   controller: PhoneListController,
 };
+
+export default PhoneListComponent;

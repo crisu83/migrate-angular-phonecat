@@ -9,7 +9,6 @@ The following steps have been taken to migrate the project:
 1. Migrate to Webpack & TypeScript
 2. Export AngularJS modules
 3. Bootstrap Angular application
-4. Export Angular modules
 
 ## Development
 

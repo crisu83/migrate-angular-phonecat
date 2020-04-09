@@ -1,11 +1,9 @@
-import { module } from 'angular';
-import { NgModule } from '@angular/core';
+import * as angular from 'angular';
 import PhoneService from './phone.service';
 
 // Define the `core.phone` module
-export const PhoneModule = module('core.phone', ['ngResource']);
+const PhoneModule = angular.module('core.phone', ['ngResource']);
 
 PhoneModule.factory('phoneService', PhoneService);
 
-@NgModule({})
-export class PhoneNgModule {}
+export default PhoneModule;

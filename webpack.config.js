@@ -16,6 +16,7 @@ module.exports = {
       {
         test: /\.ts$/,
         use: 'ts-loader',
+        exclude: [`${appPath}/**/*.spec.ts`],
       },
       {
         test: /\.css$/,

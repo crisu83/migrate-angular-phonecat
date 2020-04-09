@@ -1,6 +1,6 @@
 import 'angular-mocks';
-import { mock, equals } from 'angular';
-import { PhoneModule } from '../phone/phone.module';
+import * as angular from 'angular';
+import PhoneModule from '../phone/phone.module';
 
 describe('Phone', function () {
   let $httpBackend;
@@ -9,15 +9,15 @@ describe('Phone', function () {
 
   // Add a custom equality tester before each test
   beforeEach(function () {
-    jasmine.addCustomEqualityTester(equals);
+    jasmine.addCustomEqualityTester(angular.equals);
   });
 
   // Load the module that contains the `Phone` service before each test
-  beforeEach(mock.module(PhoneModule.name));
+  beforeEach(angular.mock.module(PhoneModule.name));
 
   // Instantiate the service and "train" `$httpBackend` before each test
   beforeEach(
-    mock.inject(function (_$httpBackend_, _PhoneService_) {
+    angular.mock.inject(function (_$httpBackend_, _PhoneService_) {
       $httpBackend = _$httpBackend_;
       $httpBackend.expectGET('phones/phones.json').respond(phonesData);
 

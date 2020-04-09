@@ -1,10 +1,10 @@
 import 'angular-mocks';
-import { mock, equals } from 'angular';
-import { PhoneDetailModule } from './phone-detail.module';
+import * as angular from 'angular';
+import PhoneDetailModule from './phone-detail.module';
 
 describe('phoneDetail', function () {
   // Load the module that contains the `phoneDetail` component before each test
-  beforeEach(mock.module(PhoneDetailModule.name));
+  beforeEach(angular.mock.module(PhoneDetailModule.name));
 
   // Test the controller
   describe('PhoneDetailController', function () {
@@ -15,7 +15,7 @@ describe('phoneDetail', function () {
     };
 
     beforeEach(
-      mock.inject(function ($componentController, _$httpBackend_, $routeParams) {
+      angular.mock.inject(function ($componentController, _$httpBackend_, $routeParams) {
         $httpBackend = _$httpBackend_;
         $httpBackend.expectGET('phones/xyz.json').respond(xyzPhoneData);
 
@@ -26,7 +26,7 @@ describe('phoneDetail', function () {
     );
 
     it('should fetch the phone details', function () {
-      jasmine.addCustomEqualityTester(equals);
+      jasmine.addCustomEqualityTester(angular.equals);
 
       expect(ctrl.phone).toEqual({});
 
