@@ -1,7 +1,7 @@
 logs/*
 !.gitkeep
 node_modules/
-app/dist/
+src/dist/
 tmp
 .DS_Store
 .idea

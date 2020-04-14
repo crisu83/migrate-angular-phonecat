@@ -1,7 +1,7 @@
 //jshint strict: false
 module.exports = function (config) {
   config.set({
-    basePath: './app',
+    basePath: './src',
     files: ['index.ts', '**/*.ts'],
     preprocessors: {
       '**/*.ts': ['karma-typescript'],
