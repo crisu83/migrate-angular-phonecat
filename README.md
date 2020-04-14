@@ -34,6 +34,8 @@ Do the following to run the test suite:
 
 ## Resources
 
+Resources gathered during this experiment (in no particular order):
+
 - https://docs.angularjs.org/tutorial/step_00
 - https://angular.io/guide/upgrade
 - https://medium.com/@UpgradingAJS/baby-steps-to-webpack-for-ngupgrade-535265194852
@@ -41,3 +43,4 @@ Do the following to run the test suite:
 - https://www.digitalocean.com/community/tutorials/how-to-upgrade-from-angularjs-to-angular-with-ngupgrade
 - https://www.digitalocean.com/community/tutorials/migrate-your-angularjs-services-to-angular-with-ngupgrade
 - https://joelbinn.gitbooks.io/hybrid-angular-angularjs-application-with-angular/content/ch1-making-the-hybrid.html
+- https://itnext.io/angular-unit-testing-101-c3492ba17e9
