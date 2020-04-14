@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { UpgradeModule } from '@angular/upgrade/static';
-import { RootComponent } from './root/root.component';
-import { Ng1AppModule } from './ng1.app';
+import { AppComponent } from './app.component';
+import { Ng1AppModule } from './app.module.ajs';
 
 @NgModule({
   imports: [BrowserModule, UpgradeModule],
-  bootstrap: [RootComponent],
-  declarations: [RootComponent],
+  bootstrap: [AppComponent],
+  declarations: [AppComponent],
 })
 export class Ng2AppModule {
   constructor(private upgrade: UpgradeModule) {}

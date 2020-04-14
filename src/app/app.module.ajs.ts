@@ -7,9 +7,9 @@ import './app.css';
 import './app.animations.css';
 
 import PhoneAnimationFactory from './app.animations';
-import { CoreModule } from './core/core.module';
-import { PhoneDetailModule } from './phone-detail/phone-detail.module';
-import { PhoneListModule } from './phone-list/phone-list.module';
+import { CoreModule } from '../core/core.module';
+import { PhoneDetailModule } from '../phone-detail/phone-detail.module';
+import { PhoneListModule } from '../phone-list/phone-list.module';
 
 // Define the `phonecatApp` module
 export const Ng1AppModule = angular.module('phonecatApp', [
