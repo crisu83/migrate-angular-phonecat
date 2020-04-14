@@ -1,18 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { UpgradeModule } from '@angular/upgrade/static';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { Ng1AppModule } from './app.module.ajs';
 
 @NgModule({
-  imports: [BrowserModule, UpgradeModule],
+  imports: [BrowserModule, UpgradeModule, HttpClientModule],
   bootstrap: [AppComponent],
   declarations: [AppComponent],
 })
 export class Ng2AppModule {
-  constructor(private upgrade: UpgradeModule) {}
-
-  ngDoBootstrap() {
-    this.upgrade.bootstrap(document.body, [Ng1AppModule.name]);
-  }
+  constructor(public upgrade: UpgradeModule) {}
 }

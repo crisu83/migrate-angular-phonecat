@@ -17,7 +17,7 @@ export const Ng1AppModule = angular.module('phonecatApp', [
   PhoneListModule.name,
 ]);
 
-Ng1AppModule.config(($routeProvider) => {
+Ng1AppModule.config(($routeProvider: angular.route.IRouteProvider) => {
   $routeProvider
     .when('/phones', {
       template: '<phone-list></phone-list>',
