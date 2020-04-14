@@ -4,8 +4,9 @@ class PhoneDetailController {
   phone: PhoneData;
   mainImageUrl: string;
 
-  constructor(private $routeParams: any, private phoneService: PhoneService) {
-    this.phone = phoneService.getResource().get({ phoneId: $routeParams.phoneId }, (phone) => {
+  constructor(private $routeParams: angular.route.IRouteParamsService, private phoneService: PhoneService) {
+    phoneService.get($routeParams.phoneId).subscribe((phone) => {
+      this.phone = phone;
       this.setImage(phone.images[0]);
     });
   }

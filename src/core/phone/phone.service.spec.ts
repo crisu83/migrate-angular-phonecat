@@ -1,43 +1,48 @@
 import * as angular from 'angular';
 import 'angular-mocks';
-import { PhoneModule } from '../phone/phone.module';
-import { PhoneService } from './phone.service';
+import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController, TestRequest } from '@angular/common/http/testing';
+import { PhoneService, PhoneData } from './phone.service';
 
-describe('Phone', function () {
-  let $httpBackend;
+describe('PhoneService', () => {
+  let httpBackend: HttpTestingController;
   let phoneService: PhoneService;
-  let phonesData = [{ name: 'Phone X' }, { name: 'Phone Y' }, { name: 'Phone Z' }];
+  let phonesData: PhoneData[] = [{ name: 'Phone X' }, { name: 'Phone Y' }, { name: 'Phone Z' }];
 
   // Add a custom equality tester before each test
-  beforeEach(function () {
+  beforeEach(() => {
     jasmine.addCustomEqualityTester(angular.equals);
   });
 
-  // Load the module that contains the `Phone` service before each test
-  beforeEach(angular.mock.module(PhoneModule.name));
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [PhoneService],
+    });
 
-  // Instantiate the service and "train" `$httpBackend` before each test
-  beforeEach(
-    angular.mock.inject(function (_$httpBackend_, _phoneService_) {
-      $httpBackend = _$httpBackend_;
-      $httpBackend.expectGET('phones/phones.json').respond(phonesData);
-
-      phoneService = _phoneService_;
-    })
-  );
-
-  // Verify that there are no outstanding expectations or requests after each test
-  afterEach(function () {
-    $httpBackend.verifyNoOutstandingExpectation();
-    $httpBackend.verifyNoOutstandingRequest();
+    httpBackend = TestBed.get(HttpTestingController);
+    phoneService = TestBed.get(PhoneService);
   });
 
-  it('should fetch the phones data from `/phones/phones.json`', function () {
-    let phones = phoneService.getResource().query();
+  // Verify that there are no outstanding expectations or requests after each test
+  afterEach(() => {
+    httpBackend.verify();
+  });
+
+  it('should fetch the phones data from `/phones/phones.json`', async () => {
+    let phones: PhoneData[] = [];
+    let request: TestRequest;
+
+    phoneService.query().subscribe((data) => {
+      phones = data;
+    });
+
+    request = httpBackend.expectOne('./phones/phones.json');
 
     expect(phones).toEqual([]);
 
-    $httpBackend.flush();
+    request.flush(phonesData);
+
     expect(phones).toEqual(phonesData);
   });
 });

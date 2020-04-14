@@ -5,7 +5,9 @@ class PhoneListController {
   orderProp: string;
 
   constructor(private phoneService: PhoneService) {
-    this.phones = phoneService.getResource().query();
+    phoneService.query().subscribe((phones) => {
+      this.phones = phones;
+    });
     this.orderProp = 'age';
   }
 }
