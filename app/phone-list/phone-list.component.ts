@@ -1,4 +1,4 @@
-import PhoneService, { PhoneData } from '../core/phone/phone.service';
+import { PhoneService, PhoneData } from '../core/phone/phone.service';
 
 class PhoneListController {
   phones: PhoneData[];
@@ -10,9 +10,7 @@ class PhoneListController {
   }
 }
 
-const PhoneListComponent = {
+export const PhoneListComponent = {
   templateUrl: './phone-list/phone-list.template.html',
   controller: PhoneListController,
 };
-
-export default PhoneListComponent;

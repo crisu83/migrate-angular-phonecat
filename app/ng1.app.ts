@@ -7,12 +7,12 @@ import './app.css';
 import './app.animations.css';
 
 import PhoneAnimationFactory from './app.animations';
-import CoreModule from './core/core.module';
-import PhoneDetailModule from './phone-detail/phone-detail.module';
-import PhoneListModule from './phone-list/phone-list.module';
+import { CoreModule } from './core/core.module';
+import { PhoneDetailModule } from './phone-detail/phone-detail.module';
+import { PhoneListModule } from './phone-list/phone-list.module';
 
 // Define the `phonecatApp` module
-const Ng1AppModule = angular.module('phonecatApp', [
+export const Ng1AppModule = angular.module('phonecatApp', [
   'ngAnimate',
   'ngRoute',
   CoreModule.name,
@@ -32,5 +32,3 @@ Ng1AppModule.config(($routeProvider) => {
 });
 
 Ng1AppModule.animation('.phone', PhoneAnimationFactory);
-
-export default Ng1AppModule;

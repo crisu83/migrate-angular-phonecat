@@ -1,6 +1,6 @@
 import 'angular-mocks';
 import * as angular from 'angular';
-import PhoneDetailModule from './phone-detail.module';
+import { PhoneDetailModule } from './phone-detail.module';
 
 describe('phoneDetail', function () {
   // Load the module that contains the `phoneDetail` component before each test

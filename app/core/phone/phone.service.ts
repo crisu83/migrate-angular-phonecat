@@ -3,7 +3,7 @@ export interface PhoneData {
   images?: string[];
 }
 
-export default class PhoneService {
+export class PhoneService {
   constructor(private $resource: any) {}
 
   getResource() {

@@ -1,6 +1,6 @@
 import 'angular-mocks';
 import * as angular from 'angular';
-import PhoneListModule from './phone-list.module';
+import { PhoneListModule } from './phone-list.module';
 
 describe('phoneList', function () {
   // Load the module that contains the `phoneList` component before each test

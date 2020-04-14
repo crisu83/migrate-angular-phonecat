@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { UpgradeModule } from '@angular/upgrade/static';
-import RootComponent from './root/root.component';
-import Ng1AppModule from './ng1.app';
+import { RootComponent } from './root/root.component';
+import { Ng1AppModule } from './ng1.app';
 
 @NgModule({
   imports: [BrowserModule, UpgradeModule],
