@@ -3,9 +3,6 @@ import 'angular-animate';
 import 'angular-resource';
 import 'angular-route';
 import 'jquery';
-import './app.css';
-import './app.animations.css';
-
 import PhoneAnimationFactory from './app.animations';
 import { CoreModule } from '../core/core.module';
 import { PhoneDetailModule } from '../phone-detail/phone-detail.module';

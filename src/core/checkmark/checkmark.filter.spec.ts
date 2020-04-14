@@ -1,8 +1,9 @@
+import * as angular from 'angular';
 import 'angular-mocks';
-import { mock } from 'angular';
+import { CoreModule } from '../core.module';
 
 describe('checkmark', () => {
-  beforeEach(mock.module('core'));
+  beforeEach(angular.mock.module(CoreModule.name));
 
   it('should convert boolean values to unicode checkmark or cross', inject((checkmarkFilter) => {
     expect(checkmarkFilter(true)).toBe('\u2713');

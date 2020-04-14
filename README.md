@@ -9,13 +9,14 @@ The following steps have been taken to migrate the project:
 1. Migrate to Webpack & TypeScript
 2. Export AngularJS modules
 3. Bootstrap Angular application
+4. Migrate to Angular CLI
 
 ## Development
 
 Do the following to run the project on your own computer:
 
 - Run `npm install` to install the dependencies
-- Run `npm run dev` to start the development server
+- Run `npm start` to start the development server
 
 ## Build
 
@@ -23,7 +24,13 @@ Do the following to build the project on your own computer:
 
 - Run `npm install` to install the dependencies
 - Run `npm run build` to build the application
-- Run `npm start` to run the application
+
+## Test
+
+Do the following to run the test suite:
+
+- Run `npm install` to install the dependencies
+- Run `npm test` to run the test suite
 
 ## Resources
 
@@ -33,3 +40,4 @@ Do the following to build the project on your own computer:
 - https://vsavkin.com/migrating-angular-1-applications-to-angular-2-in-5-simple-steps-40621800a25b
 - https://www.digitalocean.com/community/tutorials/how-to-upgrade-from-angularjs-to-angular-with-ngupgrade
 - https://www.digitalocean.com/community/tutorials/migrate-your-angularjs-services-to-angular-with-ngupgrade
+- https://joelbinn.gitbooks.io/hybrid-angular-angularjs-application-with-angular/content/ch1-making-the-hybrid.html

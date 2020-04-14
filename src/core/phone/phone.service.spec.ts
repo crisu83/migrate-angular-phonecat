@@ -1,5 +1,5 @@
-import 'angular-mocks';
 import * as angular from 'angular';
+import 'angular-mocks';
 import { PhoneModule } from '../phone/phone.module';
 import { PhoneService } from './phone.service';
 

@@ -1,5 +1,5 @@
-import 'angular-mocks';
 import * as angular from 'angular';
+import 'angular-mocks';
 import { PhoneListModule } from './phone-list.module';
 
 describe('phoneList', function () {
