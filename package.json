@@ -5,6 +5,17 @@
   "description": "A tutorial application for AngularJS",
   "repository": "https://github.com/angular/angular-phonecat",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint app",
+    "build": "webpack",
+    "dev": "webpack-dev-server --content-base src",
+    "start": "http-server ./src -a localhost -p 8000 -c-1",
+    "test": "karma start karma.conf.js",
+    "test-single-run": "npm test -- --single-run",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor e2e-tests/protractor.conf.js"
+  },
   "dependencies": {
     "@angular/common": "^9.1.0",
     "@angular/compiler": "^9.1.0",
@@ -54,16 +65,5 @@
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
-  },
-  "scripts": {
-    "lint": "eslint app",
-    "build": "webpack",
-    "dev": "webpack-dev-server --content-base src",
-    "start": "http-server ./src -a localhost -p 8000 -c-1",
-    "test": "karma start karma.conf.js",
-    "test-single-run": "npm test -- --single-run",
-    "update-webdriver": "webdriver-manager update",
-    "preprotractor": "npm run update-webdriver",
-    "protractor": "protractor e2e-tests/protractor.conf.js"
   }
 }
